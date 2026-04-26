@@ -8,6 +8,7 @@ ai-server/__pycache__/
 ai-server/venv/
 ai-server/*.pyc
 ai-server/*.h5
+ai-server/combinedDataset/
 
 .env
 .DS_Store
