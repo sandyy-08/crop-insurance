@@ -1,0 +1,281 @@
+/* Global layout */
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background-color: #f5f7fa;
+  color: #1f2933;
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background-color: #1b5e20;
+  color: #ffffff;
+  padding: 20px 40px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.app-header p {
+  margin: 4px 0 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+.app-main {
+  flex: 1;
+  padding: 24px 40px 32px;
+}
+
+.app-footer {
+  padding: 12px 40px;
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  font-size: 12px;
+  border-top: 1px solid #c8e6c9;
+}
+
+/* Sections & cards */
+.section {
+  margin-bottom: 24px;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 16px 20px 20px;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.1);
+  border: 1px solid #e5e7eb;
+}
+
+.card h2,
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* Buttons */
+.primary-button,
+.secondary-button {
+  font-size: 14px;
+  padding: 8px 14px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+.primary-button:disabled {
+  background-color: #a5d6a7;
+  cursor: not-allowed;
+}
+
+.secondary-button {
+  background-color: #ffffff;
+  color: #1f2933;
+  border: 1px solid #cbd2d9;
+}
+
+.secondary-button:hover:not(:disabled),
+.primary-button:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+/* Alerts */
+.alert {
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 13px;
+  margin-bottom: 8px;
+}
+
+.alert-error {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.alert-success {
+  background-color: #dcfce7;
+  color: #166534;
+  border: 1px solid #bbf7d0;
+}
+
+/* Stats */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 12px;
+}
+
+.stat-card {
+  background-color: #f9fafb;
+  border-radius: 6px;
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.stat-card .stat-label {
+  font-size: 12px;
+  color: #6b7280;
+}
+
+.stat-card .stat-value {
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 4px;
+}
+
+.stat-card.approved {
+  border-color: #c8e6c9;
+}
+
+.stat-card.pending {
+  border-color: #ffe0b2;
+}
+
+.stat-card.rejected {
+  border-color: #ffcdd2;
+}
+
+/* Table */
+.table-wrapper {
+  overflow-x: auto;
+}
+
+.claims-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.claims-table th,
+.claims-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+}
+
+.claims-table th {
+  background-color: #f1f5f9;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.claims-table tbody tr:hover {
+  background-color: #f9fafb;
+}
+
+/* Badges */
+.status-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.status-approved {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-pending {
+  background-color: #fff3e0;
+  color: #ef6c00;
+}
+
+.status-rejected {
+  background-color: #ffebee;
+  color: #c62828;
+}
+
+.severity-badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.severity-high {
+  background-color: #ffebee;
+  color: #b71c1c;
+}
+
+.severity-medium {
+  background-color: #fff8e1;
+  color: #f57f17;
+}
+
+.severity-low {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+}
+
+.fraud-high {
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+/* Forms */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 12px 16px;
+  margin-top: 8px;
+}
+
+.form-grid label {
+  display: flex;
+  flex-direction: column;
+  font-size: 13px;
+  color: #374151;
+}
+
+.form-grid input {
+  margin-top: 4px;
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid #d1d5db;
+  font-size: 13px;
+}
+
+.form-grid input:focus {
+  outline: none;
+  border-color: #2e7d32;
+  box-shadow: 0 0 0 1px #a5d6a7;
+}
+
+.form-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4px;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
